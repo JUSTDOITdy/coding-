@@ -69,7 +69,9 @@ $.fn.可以给$("#input1").调用方法
 
 通用js方法封装处理
 
-_(function ($) {
+{
+(function ($) {
+
 	$.extend({
 		_tree: {},
 		btTable: {},
@@ -103,5 +105,4 @@ _(function ($) {
                   } //init: function(options) {的}
     		}//table的}   
     	});//$.extend({后半部
- 
-    })(jQuery);
+})(jQuery);
