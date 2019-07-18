@@ -41,13 +41,13 @@ https://www.cnblogs.com/gavin-num1/p/5655126.html
 
 https://www.cnblogs.com/yuqingfamily/p/5775950.html
 
-![1563419701215](C:\Users\howieDep\AppData\Roaming\Typora\typora-user-images\1563419701215.png)
+![1563419701215](https://github.com/JUSTDOITdy/lantian/blob/master/image/1563419701215.png)
 
 $.extend属于（类似于）静态类(对象)的静态方法，直接用 $.table.init(options);也只能用$.进行调用,类似工具类，可以添加静态对象和方法，$.对象.方法   或  $.方法
 
 $.fn.可以给$("#input1").调用方法
 
-![1563421231431](C:\Users\howieDep\AppData\Roaming\Typora\typora-user-images\1563421231431.png)
+![1563421231431](https://github.com/JUSTDOITdy/lantian/blob/master/image/1563421231431.png)
 
 
 
@@ -63,7 +63,7 @@ $.fn.可以给$("#input1").调用方法
 
 })
 
-![1563421395040](C:\Users\howieDep\AppData\Roaming\Typora\typora-user-images\1563421395040.png)
+![1563421395040](https://github.com/JUSTDOITdy/lantian/blob/master/image/1563421395040.png)
 
 
 
