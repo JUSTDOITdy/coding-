@@ -32,20 +32,20 @@ th:text="'姓名：'+${childD.name}"
 
 5.th:each=${...} 写在那个标签，就会重复生成哪个标签
 
-6.![1563330604455](C:\Users\howieDep\AppData\Roaming\Typora\typora-user-images\1563330604455.png)
+6.![1563330604455](https://github.com/JUSTDOITdy/lantian/blob/master/image/1563330604455.png)
 
 7.thymeleaf有一些工具类（对象），数字的(Numbers)、字符串的、日期的（dates）、数组和集合的
 
-8.![1563334693965](C:\Users\howieDep\AppData\Roaming\Typora\typora-user-images\1563334693965.png)
+8.![1563334693965](https://github.com/JUSTDOITdy/lantian/blob/master/image/1563334693965.png)
 
 th:if=“...”   进行判断，如果里面是0、false、off、no否定意思的东西，就不显示
 
 th:with  是原来给某变量赋值的
 
-9.![1563335030687](C:\Users\howieDep\AppData\Roaming\Typora\typora-user-images\1563335030687.png)
+9.![1563335030687](https://github.com/JUSTDOITdy/lantian/blob/master/image/1563335030687.png)
 
-![1563335385772](C:\Users\howieDep\AppData\Roaming\Typora\typora-user-images\1563335385772.png)
+![1563335385772](https://github.com/JUSTDOITdy/lantian/blob/master/image/1563335385772.png)
 
 观察设置Map变量的方式，很多地方需要用Map，键值对，前端需要用键“userMap”来取值
 
-![1563355154848](C:\Users\howieDep\AppData\Roaming\Typora\typora-user-images\1563355154848.png)
+![1563355154848](https://github.com/JUSTDOITdy/lantian/blob/master/image/1563355154848.png)
