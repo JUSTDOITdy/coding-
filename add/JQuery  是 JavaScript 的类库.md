@@ -68,7 +68,8 @@ $.fn.可以给$("#input1").调用方法
 
 
 通用js方法封装处理
-(function ($) {
+
+_(function ($) {
 	$.extend({
 		_tree: {},
 		btTable: {},
@@ -85,9 +86,7 @@ $.fn.可以给$("#input1").调用方法
         		 	   sidePagination: "server",
         		 	   ......
         	        	    };
-
           			  var options = $.extend(defaults, options);
-    
            			  $.table._option = options;
             		  $.btTable = $('#' + options.id);
               		  $.table.initEvent();
@@ -104,5 +103,5 @@ $.fn.可以给$("#input1").调用方法
                   } //init: function(options) {的}
     		}//table的}   
     	});//$.extend({后半部
-    
+ 
     })(jQuery);
