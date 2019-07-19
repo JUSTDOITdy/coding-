@@ -1,5 +1,17 @@
 jquery： javascript库  主要是各种方法
 
+基础语法： $(selector).action()
+
+美元符号($)  定义 jQuery  ,  $等价于jQuery
+选择符（selector）"查询"和"查找" HTML 元素
+jQuery 的 action() 执行对元素的操作
+
+实例:
+
+$(this).hide() - 隐藏当前元素
+
+$("p").hide() - 隐藏所有 <p> 元素
+
 write less  , do more
 
 下载的版本：
@@ -35,10 +47,10 @@ onload :
 	javascript，初始化函数，当网页中的dom元素（关联图片、视频、资源）全部加载完毕后 立刻执行
 
 
-jquery初始化函数简化：
-$(function(){...});
+jquery初始化函数简化：   $(function(){...}); 
+ 这是为了防止文档在完全加载（就绪）之前运行 jQuery 代码，即在 DOM 加载完成后才可以对 DOM 进行操作。
 
-$等价于jQuery
+
 			
 
 dom模型：

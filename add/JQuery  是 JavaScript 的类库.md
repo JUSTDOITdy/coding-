@@ -19,6 +19,10 @@ jQuery是一个JavaScript函数库
 
 
 
+##### JavaScript有5种数据类型，**字符串值（string），数值（number），布尔值（boolean），数组，对象**(object)，数组即中括号【】**，对象即大括号{  }**，**里面是键值对，键即是属性**，键值即是属性值。
+
+##### typeof 运算符对数组返回 "object"，因为在 JavaScript 中数组属于对象。函数是function
+
 
 
 | $("*")                   | 选取所有元素                                            | [在线实例](https://www.runoob.com/try/try.php?filename=tryjquery_sel_all2) |
@@ -35,7 +39,13 @@ jQuery是一个JavaScript函数库
 | $("tr:even")             | 选取偶数位置的 <tr> 元素                                | [在线实例](https://www.runoob.com/try/try.php?filename=tryjquery_sel_even) |
 | $("tr:odd")              | 选取奇数位置的 <tr> 元素                                |                                                              |
 
+![1563506559109](C:\Users\howieDep\Desktop\picture\1563506559109.png)
+
+
+
 # JQuery的扩展方法和插件编写
+
+<https://www.cnblogs.com/MnCu8261/p/6039986.html>
 
 https://www.cnblogs.com/gavin-num1/p/5655126.html
 
@@ -48,7 +58,11 @@ https://blog.csdn.net/rambo_china/article/details/7742321
 
 $.extend属于（类似于）静态类(对象)的静态方法，直接用 $.table.init(options);也只能用$.进行调用,类似工具类，可以添加静态对象和方法，$.对象.方法   或  $.方法
 
-### JQuery.extend( ) 其实本身就是一个合并扩展JQuery类方法的方法（即给JQuery添加类（静态）方法），
+### JQuery.extend( ) 其实本身就是一个合并扩展JQuery类方法的方法（即给JQuery添加类（静态）方法），即是插件开发模式
+
+1.1中讲的`$.extend()`的例子都是传了两个或两个以上的参数，但其实只有一个参数是必须的。若只传一个参数会怎样呢。
+
+> 如果只有一个参数提供给`$.extend()`，这意味着目标参数被省略。在这种情况下，jQuery对象本身被默认为目标对象。这样，我们可以在jQuery的命名空间下添加新的功能。这对于插件开发者希望向 jQuery 中添加新函数时是很有用的。
 
 $.fn.可以给$("#input1").调用方法
 
@@ -111,3 +125,22 @@ $.fn.可以给$("#input1").调用方法
 			}//table的}   
 		});//$.extend({后半部
 })(jQuery);
+
+
+
+
+
+# 事件  是html和Javascript本身就有，jquery也可以
+
+事件通常与函数结合使用，函数不会在事件发生前被执行
+
+# http://www.w3school.com.cn/tags/html_ref_eventattributes.asp>
+
+## 1.html和Javascript 事件在标签里的一个属性，并且绑定一个方法。<button onclick="xxxx()">text<button>
+
+![1563506559109](C:\Users\howieDep\Desktop\picture\onclick.png)
+
+## 2.通过JQuery  $ 在【script】【/script】里面给标签增加事件和方法。
+
+、![1563506559109](C:\Users\howieDep\Desktop\picture\jqueryonclick.png)
+
