@@ -1,0 +1,477 @@
+<html>
+	<head>
+		<title>my title</title>
+				
+		<style type="text/css">
+			.myStyle
+			{
+				color :  yellow ;
+				
+			}
+			
+			.myStyle2
+			{
+				font-size:50px;
+				background-color:blue ;
+			
+			}
+			
+			
+			
+			div
+			{
+				/*height:90px;
+				width:200px ; 
+				
+				background-color:lightgray ; 
+				*/
+			}
+		
+		</style>
+		<!-- 引入jquery-->
+		<script type="text/javascript" src="js/jquery-3.3.1.js" >
+		</script>
+		
+		
+		
+		<!--使用引入jquery -->
+		<script type="text/javascript" >
+			
+		function myTest()
+		{
+			//$("#mytestId").html("<div style='background-color:yellow'><strong>hello world<strong></div>") ;
+			//$("#mytestId").text("<div style='background-color:yellow'><strong>hello world<strong></div>") ;
+			//alert(   $("#mytestId").html()  ); 
+			
+			//alert(  $("#uid").val() );
+			//$("#uid").val("1234")
+			
+			//var $myElement =   $("<li>xxx</li>")
+			//$("ul").append( $myElement );//内部
+			//$myElement.appendTo( $("ul") );//内部
+			
+			//$("ul").prepend($myElement );
+			//$myElement.prependTo( $("ul"));
+			
+			//var $myElement =   $("<p>hello  node...</p>")
+			//$("ul").after( $myElement ) ;
+			//$myElement.insertAfter( $("ul")) ;
+			//$("ul").before( $myElement ) ;
+			//$myElement.insertBefore($("ul") ) ;
+			//$("ul>li:eq(1)").replaceWith("<li>xx</li>");
+			
+			//$("<li>xx</li>").replaceAll("ul>li:eq(1)");
+			
+			//$("ul>li:eq(1)").remove();
+			
+			//$("ul").append($("ul>li:eq(1)").clone());
+			//alert(   $("#uid").val()   );
+			//alert(   $("#uid").attr("name")   );
+			/*$("#uid").attr({"name":"zs" , "value":"1111"})
+			alert(     $("#uid").attr("name") +"--"
+			
+					 + $("#uid").attr("value")    +"--" 
+				
+					 
+				);
+			*/
+			//$("#uid").removeAttr("value");
+			//alert( $("#uid").attr("value") ); 
+			//var $lis = $("ul").children("li") ;
+			//var $lis = $("body").find("li") ;
+			//alert( $lis.length ); 
+			
+			//alert(  $("ul>li:eq(1)").next().html() )  ;
+			//alert(  $("ul>li:eq(1)").prev().html() )  ;
+			//alert(  $("ul>li:eq(1)").siblings().length )  ;
+			//alert(  $("ul>li:eq(1)").parent().html() );
+			//alert(  $("ul>li:eq(1)").parents("ul").html() );
+			//alert(  $("ul>li:eq(1)").siblings(":odd").css("background-color","pink") );
+			$("ul>li").each(function(index, element ){
+				//alert(    index+"," +    $(this).html() +","+$(element).html() );
+			
+			});
+		}
+		function over()
+		{
+			alert("js...");
+		}
+			
+		function test()
+		{
+			
+			$("input:focus").css("background-color","yellow");
+		}
+		
+		function myBind()
+		{
+			$("#uname").bind("click",function(){
+				alert("click...");
+			});
+		}
+		
+		function myUnbind()
+		{
+			$("#uname").unbind("click");
+		}
+		
+		function myShow()
+		{
+			//$("h3").show("normal",myCallBack) ;
+			//$("h3").fadeIn(5000) ;
+			$("h3").slideDown(5000);
+		}
+		
+		function myCallBack()
+		{
+			alert("显示完毕...");
+		}
+		
+		function myHide()
+		{
+			//$("h3").fadeOut(5000);
+			$("h3").slideUp(5000);
+		}
+		/* 
+			$(document).ready(   function(){
+			
+				alert("hello 222");
+			
+			
+			});
+			
+			$(function(){
+			
+				alert("hello function ...");
+			});
+			
+		*/ 
+			function init()
+			{
+				var title = document.getElementById("myTitile");
+				alert( title.innerHTML   );
+				//alert( title.html()  );
+				alert( $(title).html() + "---000123" );
+			}
+
+			//alert("hello");
+			$(document).ready(function(){//初始化函数、就绪函数、加载函数
+				 $("#divId2").height(50);
+				 $("#divId2").width(50) ;
+				 
+			
+				 
+				 var $myDivOffset =  $("#divId2").offset(function(index, oldOffset){
+						var newOffset = new Object() ;		
+						 newOffset.left = oldOffset.left +100 ;
+						 newOffset.top = oldOffset.top + 100 ;
+						return newOffset;
+				 }) ;
+				 
+				 
+				 
+				// alert( $myDivOffset.left  +"," + $myDivOffset.top );
+				 
+			//alert("hello jquery*****");	
+				//var $title = $("#myTitile") ;
+				//alert($title.html()+"-jquery");
+				//alert($title[0].innerHTML   +"-111" );
+				//alert($title.get(0).innerHTML  +"-222"  );
+				//alert(  $("p").html()  ) ;
+				//alert(  $("p").length ) ;
+				//alert(  $(".myStyle").html()  ) ;
+				//alert(  $("#myTitile3").html()  ) ;
+				//alert(  $("#myTitile,.myStyle,#myTitile3").length  ) ;
+				//alert(  $("p.myStyle").html()  ) ;
+				//alert(  $("*").length ) ;
+				//alert(   $("#b+li").html()    ) ; 
+				//alert(   $("#b~li").length    ) ; 
+				//alert(   $("body li").length    ) ; 
+				//alert(   $("ul>li").length    ) ; 
+				//alert( $("[class]").length);
+				//alert( $("[class='xxx']").html());
+				//alert( $("[class != 'xxx']").length);
+				//alert( $("[class ^= 'x']").length);
+				//alert( $("[class $= 'x']").length);
+				//alert( $("[class *= 'y']").length);
+				//alert( $("ul>li").first().html() );
+				//alert( $("ul>li:first").html() );
+				//alert( $("ul>li").eq(2).html() );
+				//alert( $("ul>li:eq(2)").html() );
+				//alert( $( $("ul>li:odd")[1] ) .html() );
+				//alert( $("ul>li:lt(2)").length );
+				//alert( $("li:not(ul>li:eq(2))").length );
+				//$(":header").css("background-color","red");//css()設置css样式
+				//	alert( $(":visible").length );
+				//	alert( $(":hidden").length );
+				$("h1").click( function(){
+						//alert("单击事件") ;
+				
+				});
+					
+				/*	
+				$("div").mouseover(function(){
+					alert("悬浮...");
+				
+				});	
+				
+				$("div").mouseout(function(){
+					alert("离开...");
+				
+				});	
+				
+				$("div").mouseover(function(){
+					alert("悬浮...");
+				
+				}).mouseout(function(){
+					alert("离开...");
+				
+				});					
+					*/
+					
+					
+			$("div").bind({"mouseover":function(){
+					//alert("mouseover..");
+				},"mouseout":function(){
+					//alert("mouseout..");
+				} 
+			});
+			/*$("body").keydown(function(event){
+				if(event.keyCode == 13){
+					alert("回车。。。...");
+				}
+			});
+			$("body").keyup(function(){
+				alert("松开...");
+			});*/
+			
+			$("#uid").focus(function(){
+				//当前元素就是 $("#uid"),即 id="uid"的文本框
+				//当前元素可以用this表示
+				$(this).css("background-color","#abc");
+			
+			}).blur(function(){
+					$(this).css("background-color","white");
+			});
+			
+			$("#uid").bind("click",function(){
+				//alert("bind形式的单击事件》。。");
+			});
+			
+			$("h2").hover(function(){alert("悬浮。。");},function(){alert("离开");});
+			/*
+			$("body").toggle(function(){
+					$(this).css("background-color","red");
+			
+				},function(){
+					$(this).css("background-color","yellow");}
+				,function()
+				{
+					$(this).css("background-color","blue");});
+			*/
+			//$("#color2Id").css("color","red");
+			//$("#color2Id").css({"color":"red" , "font-size":"100px" ,"background-color":"gray"  });
+			//$("#mytestId").addClass("myStyle myStyle2");
+			
+			
+			$("#mytestId").click(function(){
+			
+				//$("#mytestId").removeClass();
+				//$("#mytestId").toggleClass("myStyle myStyle2");
+			});
+			
+			//alert(   $("#mytestId").html()  ); 
+			$("#bid").click(function(){
+				$(this).offsetParent().css("border","10px blue solid");  ;
+			
+			});
+			
+			$("#uage").blur(function(){
+				var $age = $("#uage").val() ;
+				if(!($age > 0 && $age <100)){
+					alert("年龄输入有误");
+				}
+			});
+			//当单击submit按钮时触发,通过返回值true|false告知程序 是否校验成功
+			/*("#myForm").submit(function(){
+				var $name = $("#uname").val();
+				var $pwd = $("#upwd").val();
+				var $height = $("#uheight").val();
+
+				if($name.length<2 || $name.length>6)
+				{
+					alert("名字必須2-6位");
+					return false ;//校验失败
+				}
+				if($pwd.length<=6)
+				{
+					alert("密码必須6位以上");
+					return false ;//校验失败
+				}
+				if($height <100  || $height>200 )
+				{
+					alert("身高应该在100-200");
+					return false ;//校验失败
+				}
+		
+				
+				return true ;//校验成功，表单提交
+				
+			});*/
+			
+			$("#utel").blur(function(){
+				var $tel = $(this).val();
+				var reg  = /^1\d{10}$/ ;
+				if(!(reg.test($tel))){
+					if($tel="" || $tel.length==0)
+					{
+						$("#telTip").css("display","none");
+					}else
+					{
+						$("#telTip").css("display","inline");
+					}
+				}else
+				{
+					$("#telTip").css("display","none");
+				}
+			});
+			$("#uemail").blur(function(){
+				var $email = $(this).val();
+				var reg  = /^\w+@[0-9a-zA-Z]{2,4}\.[a-zA-Z]{2,3}(\.[a-zA-Z]{2,3})?$/ ;
+				if( ! reg.test($email)  )
+				{
+					if($email="" || $email.length==0)
+					{
+						$("#emailTip").css("display","none");
+					}
+					else{
+						$("#emailTip").css("display","inline");
+					}
+				}else{
+					$("#emailTip").css("display","none");
+				}
+			});
+			
+		});	//ready()
+		
+		function check()
+		{
+				var $name = $("#uname").val();
+				var $pwd = $("#upwd").val();
+				var $height = $("#uheight").val();
+
+				if($name.length<2 || $name.length>6)
+				{
+					alert("名字必須2-6位");
+					return false ;//校验失败
+				}
+				if($pwd.length<=6)
+				{
+					alert("密码必須6位以上");
+					return false ;//校验失败
+				}
+				if($height <100  || $height>200 )
+				{
+					alert("身高应该在100-200");
+					return false ;//校验失败
+				}
+		
+				
+				return true ;//校验成功，表单提交
+		}
+		</script>
+	</head>
+	<!-- <body onload="init()"> -->
+	<body>
+	
+	
+		<form id="myForm" action="result.html" onsubmit="return check()" >
+			name<input id="uname"  /><br/>
+			pwd<input id="upwd" type="password"   /><br/>
+			height<input id="uheight"  /><br/>
+			tel:<input id="utel"  /><font id="telTip" color="red" style="display:none">电话号码格式不正确</font><br/>
+			email:<input id="uemail"  /><font id="emailTip"color="red" style="display:none">邮箱格式不正确</font><br/>
+			<input type="submit" value="注册" />
+		
+		</form>
+	
+			<input id="uage"  />
+	
+			
+	
+		<div style="position:relative ;height:300px;width:300px ; border:10px solid red">
+				abc
+			<input id="bid" type="button"  value="子节点"/>
+		</div>
+				
+		<input id="uid" type="text"  value="9527" name="..."/> 
+		<button onclick="myTest()">test</button>
+		
+		
+		
+			<ul>
+			
+				<li>aaa</li>
+				<li>bbb</li>
+				<li>ccc</li>
+				<li>ddd</li>
+				<li>ee</li>
+				<li>ff</li>
+			</ul>
+			
+			
+		<button onclick="myTest()">test</button>
+	
+	
+	
+
+		
+		<p id="mytestId">  
+			<font color="purple">some text....</font>
+		</p>
+		<button onclick="myTest()">test</button>
+		
+		
+		<p id="color2Id">color222</p>
+		<h3>h3h3</h3>
+		<button onclick="myShow()">显示</button>
+		<button onclick="myHide()">隐藏</button>
+		
+		<br/><br/><br/><br/><br/>
+		<div id="divId2" onmouseover="over()" >
+				some 222222text...
+		</div>
+		
+	
+		
+		<br/>
+		uname:<input type="text"   id="uname" /> 
+		
+		
+		<input type="button" value="绑定" onclick="myBind()" />
+		<input type="button" value="解绑" onclick="myUnbind()" />
+		<br/><br/><br/>
+	
+		id<input type="text"   onclick="test()"/> <br/>
+		username<input type="text"  onclick="test()" />
+		<br/>
+		<input type="button" value="测试" onclick="test()" />
+		
+			<h1>h1h1...</h1>
+			
+			<h2 style="border:1px solid red">h2h2...</h2>
+				
+			
+
+
+						
+			<p id="myTitile" >color</p>
+
+			<p class="xxx">color222</p>
+			
+			<p class="yyx" id="myTitile3">color333</p>
+			
+
+			
+	</body>
+</html>

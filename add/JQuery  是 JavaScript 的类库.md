@@ -48,6 +48,8 @@ https://blog.csdn.net/rambo_china/article/details/7742321
 
 $.extend属于（类似于）静态类(对象)的静态方法，直接用 $.table.init(options);也只能用$.进行调用,类似工具类，可以添加静态对象和方法，$.对象.方法   或  $.方法
 
+### JQuery.extend( ) 其实本身就是一个合并扩展JQuery类方法的方法（即给JQuery添加类（静态）方法），
+
 $.fn.可以给$("#input1").调用方法
 
 ![1563421231431](https://github.com/JUSTDOITdy/lantian/blob/master/image/1563421231431.png)
@@ -85,27 +87,27 @@ $.fn.可以给$("#input1").调用方法
 			// 初始化表格参数
 			init: function(options) {
 				    var defaults = {
-            			id: "bootstrap-table",
-            			type: 0, // 0 代表bootstrapTable 1代表bootstrapTreeTable
-        		  	  height: undefined,
-        		 	   sidePagination: "server",
-        		 	   ......
-        	        	    };
-          			  var options = $.extend(defaults, options);
-           			  $.table._option = options;
-            		  $.btTable = $('#' + options.id);
-              		  $.table.initEvent();
-             	      $('#' + options.id).bootstrapTable({
-                 		   url: options.url,                                   // 请求后台的URL（*）
-                  		   contentType: "application/x-www-form-urlencoded",   // 编码类型
-                   		   method: 'post',                                     // 请求方式（*）
-                           cache: false,                                       // 是否使用缓存
-                           height: options.height,                             // 表格的高度
-                           striped: options.striped,                           // 是否显示行间隔色
-                           sortable: true,                                     // 是否启用排序
-                            ......
-                      });
-                  } //init: function(options) {的}
-    		}//table的}   
-    	});//$.extend({后半部
+	        			id: "bootstrap-table",
+	        			type: 0, // 0 代表bootstrapTable 1代表bootstrapTreeTable
+	    		  	  height: undefined,
+	    		 	   sidePagination: "server",
+	    		 	   ......
+	    	        	    };
+	      			  var options = $.extend(defaults, options);
+	       			  $.table._option = options;
+	        		  $.btTable = $('#' + options.id);
+	          		  $.table.initEvent();
+	         	      $('#' + options.id).bootstrapTable({
+	             		   url: options.url,                                   // 请求后台的URL（*）
+	              		   contentType: "application/x-www-form-urlencoded",   // 编码类型
+	               		   method: 'post',                                     // 请求方式（*）
+	                       cache: false,                                       // 是否使用缓存
+	                       height: options.height,                             // 表格的高度
+	                       striped: options.striped,                           // 是否显示行间隔色
+	                       sortable: true,                                     // 是否启用排序
+	                        ......
+	                  });
+	              } //init: function(options) {的}
+			}//table的}   
+		});//$.extend({后半部
 })(jQuery);
