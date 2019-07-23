@@ -17,7 +17,13 @@ jQuery是一个JavaScript函数库
 - $("p.test").hide() - 隐藏所有 class="test" 的 <p> 元素
 - $("#test").hide() - 隐藏所有 id="test" 的元素
 
+**js：引入一个js文件，就是执行这js文件中的代码，解释性语言，jquery也是js**
 
+jquery对象是一个伪数组，是dom对象的包装集合，可以用下标[0]取出的是dom对象
+
+jquery可以链式编程，前提是函数（方法）会返回一个（可能是他本身）对象。
+
+$(this).addClass('active').siblings('li').removeClass('active');
 
 ##### JavaScript有5种数据类型，**字符串值（string），数值（number），布尔值（boolean），数组，对象**(object)，数组即中括号【】**，对象即大括号{  }**，**里面是键值对，键即是属性**，键值即是属性值。
 
@@ -144,3 +150,28 @@ $.fn.可以给$("#input1").调用方法
 
 、![1563506559109](C:\Users\howieDep\Desktop\picture\jqueryonclick.png)
 
+# jquery的节点操作（我现在要用）
+
+1.设置内容：html()方法给参数(会把原来的内容给覆盖，里面的标签会自动解析出来)
+
+$('#id').click(function(){
+
+​	$('#id1').html('我是设置的内容<1a href="https://www.baidu.com">百度一下</1a>')
+
+})
+
+#### 2.$() ；   推荐用这个
+
+创建出新节点元素，然后插入或追加到你想要放到的地方。
+
+$('#btn1').click(function(){
+
+​	var $link = $('<1a href="http:/\ www.adsadas.com">网站</1a>');  //新创建出来的节点（元素）
+
+​	$('#div').append($link);
+
+});
+
+.html()会覆盖，所以要一次性都弄完再设置，.html()方法实际上是写html语句进去，然后再解析。
+
+js的  数组.join(separator)  方法用于将数组里的内容放入一个字符串，参数是分隔符。
