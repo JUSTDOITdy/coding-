@@ -175,3 +175,15 @@ $('#btn1').click(function(){
 .html()会覆盖，所以要一次性都弄完再设置，.html()方法实际上是写html语句进去，然后再解析。
 
 js的  数组.join(separator)  方法用于将数组里的内容放入一个字符串，参数是分隔符。
+
+![jquery创建节点01](C:\Users\howieDep\Desktop\picture\jquery创建节点01.PNG)![jquery创建节点10](C:\Users\howieDep\Desktop\picture\jquery创建节点10.PNG)
+
+  ![jquery创建节点11](C:\Users\howieDep\Desktop\picture\jquery创建节点11.PNG)![jquery创建节点1](C:\Users\howieDep\Desktop\picture\jquery创建节点1.PNG)
+
+![jquery创建节点22](C:\Users\howieDep\Desktop\picture\jquery创建节点22.PNG)
+
+父节点(jquery对象).append(子节点);
+
+子节点(jquery对象)appendTo(父节点);  两者互为相反操作
+
+eg: $('#tar-city>option').appendTo($('#src-city'));   //这个appendTo也是有用的，不要小视
