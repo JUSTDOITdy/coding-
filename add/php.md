@@ -40,8 +40,18 @@ xmlhttp.onreadystatechange =  function(ev2){
 
 ​	if(xmlhttp.readyState)
 
-
-
 }
 
 5处理返回的结果
+
+
+
+
+
+### 【】java没有函数，那叫方法，Java是面向对象的，要有面向对象的思维，
+
+php分全局和局部变量，函数里面不能直接访问全局变量，要用global 关键字
+
+
+
+可变函数类似回调函数，把函数当参数传递过去（不加括号）
